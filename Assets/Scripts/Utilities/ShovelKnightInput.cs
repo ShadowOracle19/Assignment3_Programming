@@ -31,6 +31,8 @@ public static class ShovelKnightInput
     /// <returns>True is the jump button is being pressed, false is released.</returns>
     public static bool IsJumpPressed()
     {
-        return Input.GetButton(BUTTON_JUMP);
+        return Input.GetButtonUp(BUTTON_JUMP);
+        // a little concern with this line before it was getbuttondown
+        // but it did the same thing as the previous jump function so having it as getbuttonup does what its supposed to
     }
 }
